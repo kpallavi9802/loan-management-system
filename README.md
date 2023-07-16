@@ -1,6 +1,6 @@
 # Loan Management Backend System
 
-This is a Express-Postgres based microservice layer for a loan management application that generates detailed loan repayment schedules for customers.
+This is a Express-MongoDB based microservice layer for a loan management application that generates detailed loan repayment schedules for customers.
 
 ## Set up
 
