@@ -1,0 +1,25 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 9000:9000
+    environment:
+      - NODE_ENV=local
+      - DB_CONNECTION_STRING=mongodb+srv://<username>:<password>@<cluster-url>/<database>?retryWrites=true&w=majority # replace DB connection string here
+      - PORT=9000
+      - API_TOKEN_KEY=mysecretkey
+      - ALGORITHM='HS256'
+    command: npm start
+    volumes:
+      - ./backend/src:/app/backend/src
+
+  # currently using atlas db
+  # mongodb:
+  #   image: mongo:latest
+  #   ports:
+  #     - 27017:27017
+  #   volumes:
+  #     - ./data:/data/db
