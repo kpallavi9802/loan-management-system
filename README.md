@@ -23,7 +23,7 @@ npm start
 
 ### Step-4
 
-use Postman for api testing (use url - http://localhost:9000/<all-defined-routes>)
+use Postman for api testing (use url - `http://localhost:9000/<all-defined-routes>`)
 
 ## Further improvements
 
