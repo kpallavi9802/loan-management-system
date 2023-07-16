@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const secretKey = process.env.API_TOKEN_KEY || "mysecretkey";
-const expiresIn = process.env.TOKEN_EXPIRE_TIME || "2h";
+const expiresIn = 60 * 120;
 const ALGORITHM = process.env.ALGORITHM || "HS256";
 
 class UserService {
@@ -36,6 +36,7 @@ class UserService {
 
   async login(userRequest) {
     try {
+      console.log("request = ", userRequest);
       if (!userRequest.email || !userRequest.password) {
         return { status: 403, message: "All fields are required!" };
       }
