@@ -1,30 +1,46 @@
 # Loan Management Backend System
 
-This is a Express-MongoDB based microservice layer for a loan management application that generates detailed loan repayment schedules for customers.
+An Express-MongoDB based microservice application for a loan management that generates detailed loan repayment schedules for customers.
 
 ## Set up
 
-### step -1
+#### Using Docker
+Replace db string in `docker-compose` file and run following commands in `/` 
 
-install dependencies
-go to `/backend/`
-npm install
+```sh
+docker-compose build
+docker-compose up -d
+```
+### Setting  up locally
+##### step -1
 
-### Step-2 Database set up
+Install dependencies
 
+```sh
+cd /backend/
+npm install 
+```
+
+##### Step-2 
+Database set up
 - set up MongoDB Atlas and obtain the connection string
 - edit DB_CONNECTION_STRING with your connection string inside /backend/.env file
 
-### Step-3
+##### Step-3
 
 Bring up the server using cmd
-
+```sh
 npm start
+```
 
-### Step-4
+##### Step-4
 
 use Postman for api testing (use url - `http://localhost:9000/<all-defined-routes>`)
 
-## Further improvements
+## Links
+- [Repository](https://github.com/kpallavi9802/loan-management-system/blob/main)
+- [Postman API collections](https://github.com/kpallavi9802/loan-management-system/blob/main/Embifi_Loan_Management_System.postman_collection.json)
 
-- Nginx configuration and Deployment on EC2
+## Scope(Pending works)
+- Bringing up production server using nginx reverse proxy  
+- Deployment on ec2
