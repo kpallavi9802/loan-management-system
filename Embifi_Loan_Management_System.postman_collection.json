@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "1188de19-fa71-49be-8496-cdf49edf3b5a",
+		"name": "Embifi_Loan_Management_System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27685010"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emai\": \"biplaba@gmail.com\",\r\n    \"password\": \"biplaba@1234\",\r\n    \"firstName\": \"biplaba\",\r\n    \"lastName\": \"kumar\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/user/add-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"user",
+								"add-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"pallavi@gmail.com\",\r\n    \"password\": \"abc@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8050/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8050",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Loan",
+			"item": [
+				{
+					"name": "createLoan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGIxYzJiMGZkMGY5OTJlZDM2NGMzNzIiLCJyb2xlIjoibG9hbiBvZmZpY2VyIiwiZXhwaXJlc0luIjoxMjAsImlhdCI6MTY4OTM3MTMzMn0.q-U3y4FxmCA0YeuuqWiQ-4WYE8AnxA0XLL3DMTwL0EM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"64b1c2b0fd0f992ed364c372\",\r\n  \"amount\": 5000,\r\n  \"interestRate\": 8.5,\r\n  \"duration\": 4,\r\n  \"startDate\": \"2023-07-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8050/api/loan/create-loan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8050",
+							"path": [
+								"api",
+								"loan",
+								"create-loan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-loans",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjNhMTkzMTgzNTNkMjEyNjQyOTBjZiIsImVtYWlsIjoicGFsbGF2aUBnbWFpbC5jb20iLCJpYXQiOjE2ODk1MDkzNjYsImV4cCI6MTY4OTUxNjU2Nn0.xCbYw6XklsLUlNRwlJIGhUj9SONOLN8PPROSwM1bEII",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGIxYzJiMGZkMGY5OTJlZDM2NGMzNzIiLCJyb2xlIjoibG9hbiBvZmZpY2VyIiwiZXhwaXJlc0luIjoxMjAsImlhdCI6MTY4OTM3MTMzMn0.q-U3y4FxmCA0YeuuqWiQ-4WYE8AnxA0XLL3DMTwL0EM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/loan/get-loans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"loan",
+								"get-loans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLoanSchedule",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjNhMTkzMTgzNTNkMjEyNjQyOTBjZiIsImVtYWlsIjoicGFsbGF2aUBnbWFpbC5jb20iLCJpYXQiOjE2ODk1MTcwNTcsImV4cCI6MTY4OTUyNDI1N30.HE9kDyiU2ABEeKtm3QQ4iJPnM8XxCjGKRBDPOa8GuH8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGIxYzJiMGZkMGY5OTJlZDM2NGMzNzIiLCJyb2xlIjoibG9hbiBvZmZpY2VyIiwiZXhwaXJlc0luIjoxMjAsImlhdCI6MTY4OTM3MTMzMn0.q-U3y4FxmCA0YeuuqWiQ-4WYE8AnxA0XLL3DMTwL0EM",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/loan/schedule/64b3befc9dc1f2551903fef2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"loan",
+								"schedule",
+								"64b3befc9dc1f2551903fef2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
