@@ -19,14 +19,12 @@ npm install
 
 Bring up the server using cmd
 
-```sh
 npm start
-``
 
 ### Step-4
 
 use Postman for api testing (use url - http://localhost:9000/<all-defined-routes>)
 
 ## Further improvements
+
 - Nginx configuration and Deployment on EC2
-```
