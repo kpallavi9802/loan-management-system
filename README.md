@@ -1,6 +1,6 @@
 # Loan Management Backend System
 
-An Express-MongoDB based microservice application for a loan management that generates detailed loan repayment schedules for customers.
+An Express-MongoDB-based microservice application for loan management that generates detailed loan repayment schedules for customers.
 
 ## Technology Stack
 
@@ -12,7 +12,7 @@ Nginx
 ## Set up
 
 #### Using Docker
-Replace db string in `docker-compose` file and run following commands in `/` 
+Replace the db string in the `docker-compose` file and run the following commands in `/` 
 
 ```sh
 docker-compose build
@@ -42,7 +42,7 @@ npm start
 
 ##### Step-4
 
-use Postman for api testing (use url - `http://localhost:9000/<all-defined-routes>`)
+use Postman for API testing (use URL - `http://localhost:9000/<all-defined-routes>`)
 
 ## Links
 - [Repository](https://github.com/kpallavi9802/loan-management-system/blob/main)
