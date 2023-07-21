@@ -8,13 +8,22 @@ services:
       - 9000:9000
     environment:
       - NODE_ENV=local
-      - DB_CONNECTION_STRING=mongodb+srv://<username>:<password>@<cluster-url>/<database>?retryWrites=true&w=majority # replace DB connection string here
+      - DB_CONNECTION_STRING=mongodb+srv://pallavi:wOfFawLu7T9xWGAV@cluster0.6gakicv.mongodb.net/loanDetails?retryWrites=true&w=majority' # replace DB connection string here
       - PORT=9000
       - API_TOKEN_KEY=mysecretkey
       - ALGORITHM='HS256'
     command: npm start
     volumes:
       - ./backend/src:/app/backend/src
+
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - backend
 
   # currently using atlas db
   # mongodb:
