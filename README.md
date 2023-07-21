@@ -2,6 +2,13 @@
 
 An Express-MongoDB based microservice application for a loan management that generates detailed loan repayment schedules for customers.
 
+## Technology Stack
+
+Express.js
+MongoDB
+Docker
+Nginx
+
 ## Set up
 
 #### Using Docker
@@ -41,6 +48,4 @@ use Postman for api testing (use url - `http://localhost:9000/<all-defined-route
 - [Repository](https://github.com/kpallavi9802/loan-management-system/blob/main)
 - [Postman API collections](https://github.com/kpallavi9802/loan-management-system/blob/main/Embifi_Loan_Management_System.postman_collection.json)
 
-## Scope(Pending works)
-- Bringing up production server using nginx reverse proxy  
-- Deployment on ec2
+
