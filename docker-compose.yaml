@@ -16,6 +16,15 @@ services:
     volumes:
       - ./backend/src:/app/backend/src
 
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - backend
+
   # currently using atlas db
   # mongodb:
   #   image: mongo:latest
